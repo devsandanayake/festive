@@ -6,9 +6,9 @@ import { FaStar, FaChair, FaUtensils, FaCampground, FaLightbulb, FaTable, FaGift
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"; // For slider arrows
 
 const items = [
-  { id: 1, name: "Chairs", image: "/ch.webp", rating: 4.5, price: 50 },
-  { id: 2, name: "Plates", image: "/1.png", rating: 4, price: 10 },
-  { id: 3, name: "Tents", image: "/2.jpg", rating: 5, price: 200 },
+  { id: 1, name: "Chairs", image: "/ch.webp", rating: 4.5, price: 10 },
+  { id: 2, name: "Plates", image: "/20.jpg", rating: 4, price: 10 },
+  { id: 3, name: "Tents", image: "/21.webp", rating: 5, price: 2500 },
   { id: 4, name: "Lights", image: "/3.jpeg", rating: 4, price: 80 },
   { id: 5, name: "Tables", image: "/4.jpeg", rating: 3.5, price: 100 },
   { id: 6, name: "Decorations", image: "/5.jpeg", rating: 4.5, price: 150 },
@@ -29,7 +29,7 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedItem, setSelectedItem] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [priceFilter, setPriceFilter] = useState({ min: 0, max: 1000 });
+  const [priceFilter, setPriceFilter] = useState({ min: 0, max: 4000 });
 
   // Auto slide every 5 seconds
   useEffect(() => {
@@ -201,7 +201,7 @@ export default function Home() {
             </div>
                        <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.name}</h3>
             {renderStars(item.rating)}
-            <p className="text-gray-700 mb-4">Rent Price: ${item.price}/day</p>
+            <p className="text-gray-700 mb-4">Rent Price: Rs.{item.price}/day</p>
             <button
               className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"
               onClick={() => handleItemClick(item)}
