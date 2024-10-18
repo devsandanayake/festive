@@ -1,8 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./Navbar";
+import Navbar from "./components/Navbar"; // Adjust the path as needed
 import Head from "next/head"; // Import Head component
- 
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +26,6 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/logo.png" />
       </Head>
       <body className={geistSans.variable}> {/* Use the correct font variable */}
-        {/* <Bar /> */}
         <Navbar />
         {children}
       </body>
