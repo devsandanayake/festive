@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
-const Navbar = () => {
+const NavBar = () => {
   const [nav, setNav] = useState(false);
 
   const links = [
@@ -88,4 +88,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
